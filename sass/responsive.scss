@@ -1,0 +1,7 @@
+$mobile: 768px;
+$tablet:992px;
+$laptop:1440px;
+
+$mobile-responsive: "(max-width: #{$mobile})";
+$tablet-responsive: "(max-width: #{$tablet})"; 
+$laptop-responsive: "(max-width: #{$laptop})"; 
