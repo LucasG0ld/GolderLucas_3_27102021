@@ -1,11 +1,14 @@
 /* IMPORTS */
-.omf-header i, .omf-position-container i {
+.omf-restaurantpage-header i {
   position: absolute;
   top: 38%;
   left: 5%;
   font-size: 22px;
 }
 
+.omf-restaurantpage-header a {
+  color: black;
+}
 .omf-restaurantpage-picture {
   width: 100%;
 }
@@ -17,6 +20,7 @@
   z-index: 10;
 }
 .omf-restaurantpage-menu-container {
+  position: relative;
   border-radius: 30px 30px 0 0;
   padding: 40px 20px 0 20px;
 }
@@ -62,6 +66,46 @@
   overflow: hidden;
   width: 77%;
 }
+@media (min-width: 1024px) {
+  .omf-restaurantpage-picture {
+    height: 530px;
+    object-fit: cover;
+  }
+
+  .omf-restaurantpage-menu-container {
+    max-width: 1220px;
+    margin: auto;
+  }
+
+  .omf-restaurantpage-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .omf-restaurantpage-menu-item-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .omf-restaurantpage-menu-card-container {
+    width: 100% !important;
+  }
+
+  .omf-restaurantpage-menu-footer > .omf-container {
+    max-width: 1220px;
+  }
+}
+@media (max-width: 1024px) {
+  .omf-restaurantpage-menu-card-container {
+    width: 80% !important;
+  }
+}
+@media (max-width: 768px) {
+  .omf-restaurantpage-menu-card-container {
+    width: 100% !important;
+  }
+}
 /* VARIABLES */
 /* STYLE */
 body {
@@ -102,10 +146,10 @@ h2 {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
 
-.omf-header, .omf-position-container {
+.omf-header, .omf-position-container, .omf-restaurantpage-header {
   padding: 15px 0 15px 0;
 }
-.omf-header h1, .omf-position-container h1 {
+.omf-header h1, .omf-position-container h1, .omf-restaurantpage-header h1 {
   text-align: center;
 }
 
@@ -180,6 +224,11 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+.omf-restaurant-container a {
+  color: black;
+  text-decoration: none;
+  width: 48%;
+}
 
 .omf-restaurant-card {
   background: #fff;
@@ -206,7 +255,7 @@ h2 {
   overflow: hidden;
 }
 
-.omf-footer {
+.omf-footer, .omf-restaurantpage-menu-footer {
   background: #444444;
   padding: 5px 0 10px 0;
 }
@@ -263,7 +312,7 @@ h2 {
 
 @media (min-width: 1024px) {
   .omf-container {
-    max-width: 1440px;
+    max-width: 992px;
     margin: auto;
   }
 
@@ -273,21 +322,6 @@ h2 {
 
   .omf-functionning-card-container, .omf-restaurantpage-menu-card-container {
     width: 33.33%;
-  }
-
-  .omf-restaurant-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .omf-restaurant-container > .omf-restaurant-card {
-    width: 48%;
-    margin-bottom: 40px;
-  }
-}
-@media (min-width: 1024px) {
-  .omf-container {
-    max-width: 992px;
   }
 
   .omf-restaurant-container {

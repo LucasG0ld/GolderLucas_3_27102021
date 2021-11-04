@@ -5,5 +5,5 @@ $desktop:1024px;
 
 $mini-mobile-responsive: "(max-width: #{$mini-mobile})";
 $mobile-responsive: "(max-width: #{$mobile})";
-$tablet-responsive: "(min-width: #{$desktop})"; 
+$tablet-responsive: "(max-width: #{$desktop})"; 
 $desktop-responsive: "(min-width: #{$desktop})"; 

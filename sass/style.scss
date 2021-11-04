@@ -140,6 +140,11 @@ h2 {
 .omf-restaurant-container {
     display: flex;
     flex-direction: column;
+    a {
+        color: black;
+        text-decoration: none;
+        width: 48%;
+    }
 }
 
 .omf-restaurant-card {
@@ -228,7 +233,7 @@ h2 {
 
 @media #{$desktop-responsive} {
     .omf-container {
-        max-width: 1440px;
+        max-width: 992px;
         margin: auto;
     }
     .omf-functionning-container {
@@ -236,21 +241,6 @@ h2 {
     }
     .omf-functionning-card-container {
         width: 33.33%;
-    }
-    .omf-restaurant-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        &>.omf-restaurant-card {
-            width: 48%;
-            margin-bottom: 40px;
-        }
-    }
-}
-
-@media #{$tablet-responsive} {
-    .omf-container {
-        max-width: 992px;
     }
     .omf-restaurant-container {
         flex-direction: row;

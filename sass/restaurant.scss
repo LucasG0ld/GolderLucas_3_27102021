@@ -1,4 +1,5 @@
-.omf-header {
+.omf-restaurantpage-header {
+    @extend .omf-header;
     i {
         position: absolute;
         top: 38%;
@@ -8,6 +9,11 @@
 }
 
 .omf-restaurantpage {
+    &-header {
+        a {
+            color: black
+        }
+    }
     &-picture {
         width: 100%;
     }
@@ -20,6 +26,7 @@
     z-index: 10;
     &-container {
         @extend .omf-container-grey;
+        position: relative;
         border-radius: 30px 30px 0 0;
         padding: 40px 20px 0 20px;
         h2 {
@@ -70,4 +77,47 @@
     &-order {
         @extend .omf-center-content;
     }
+    &-footer {
+        @extend .omf-footer;
+    }
 }
+
+@media #{$desktop-responsive} {
+    .omf-restaurantpage-picture {
+        height: 530px;
+        object-fit: cover;
+    }
+    .omf-restaurantpage-menu-container {
+        max-width: 1220px;
+        margin: auto;
+    }
+    .omf-restaurantpage-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .omf-restaurantpage-menu-item-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .omf-restaurantpage-menu-card-container {
+        width: 100%!important;
+    }
+    .omf-restaurantpage-menu-footer > .omf-container {
+        max-width: 1220px;
+    }
+}
+
+@media #{$tablet-responsive} {
+    .omf-restaurantpage-menu-card-container {
+        width: 80%!important;
+    }
+}
+
+@media #{$mobile-responsive} {
+    .omf-restaurantpage-menu-card-container {
+        width: 100%!important;
+    }
+}
+
+
