@@ -46,14 +46,26 @@
   margin-bottom: 15px;
 }
 .omf-restaurantpage-menu-card-container {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.13);
+  border-radius: 20px;
   margin-bottom: 15px !important;
+  display: flex;
+  position: relative;
+  overflow: hidden;
 }
-.omf-restaurantpage-menu-size {
-  width: 31%;
+.omf-restaurantpage-menu-card-container:hover .omf-restaurantpage-menu-animation {
+  animation: check-animation 1s ease;
+  animation-fill-mode: forwards;
+}
+.omf-restaurantpage-menu-card-container:hover .omf-restaurantpage-menu-animation i {
+  animation: check-rotate 1s ease;
+  animation-fill-mode: forwards;
 }
 .omf-restaurantpage-menu-card {
-  right: 0 !important;
-  padding: 15px !important;
+  width: 100%;
+  position: relative;
+  right: 0;
+  padding: 15px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -69,6 +81,29 @@
   overflow: hidden;
   width: 80%;
 }
+.omf-restaurantpage-menu-animation {
+  background: #99E2D0;
+  width: 90px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -85px;
+}
+.omf-restaurantpage-menu-animation div {
+  width: 27px;
+  height: 27px;
+  border-radius: 30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.omf-restaurantpage-menu-animation div i {
+  color: #99E2D0;
+  font-size: 19px;
+}
+
 @media (min-width: 1024px) {
   .omf-restaurantpage-picture {
     height: 530px;
@@ -95,6 +130,10 @@
     width: 100% !important;
   }
 
+  .omf-restaurantpage-menu-size {
+    width: 31%;
+  }
+
   .omf-restaurantpage-menu-footer > .omf-container {
     max-width: 1220px;
   }
@@ -107,6 +146,22 @@
 @media (max-width: 768px) {
   .omf-restaurantpage-menu-card-container {
     width: 100% !important;
+  }
+}
+@keyframes check-animation {
+  from {
+    margin-right: -85px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+@keyframes check-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 /* VARIABLES */
@@ -211,7 +266,7 @@ h2 {
   color: #fff;
 }
 
-.omf-functionning-card, .omf-restaurantpage-menu-card {
+.omf-functionning-card {
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.13);
   width: 100%;
   padding: 25px 0;
@@ -219,7 +274,7 @@ h2 {
   position: relative;
   right: 10px;
 }
-.omf-functionning-card i, .omf-restaurantpage-menu-card i {
+.omf-functionning-card i {
   margin-left: 40px;
 }
 

@@ -53,16 +53,27 @@
     }
     &-card-container {
         @extend .omf-functionning-card-container;
+        box-shadow: 0 0 16px rgb(0 0 0 / 13%);
+        border-radius: 20px;
         margin-bottom: 15px!important;
-    }
-    &-size {
-        width: 31%;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        &:hover .omf-restaurantpage-menu-animation {
+            animation: check-animation 1s ease;
+            animation-fill-mode:forwards; 
+        }
+        &:hover .omf-restaurantpage-menu-animation i {
+            animation: check-rotate 1s ease;
+            animation-fill-mode:forwards; 
+        }
     }
 
     &-card {
-        @extend .omf-functionning-card;
-        right: 0!important;
-        padding: 15px!important;
+        width: 100%;
+        position: relative;
+        right: 0;
+        padding: 15px;
         white-space: nowrap;
         overflow: hidden;
         p {
@@ -83,6 +94,29 @@
     }
     &-footer {
         @extend .omf-footer;
+    }
+    &-animation {
+        background: #99E2D0;
+        width: 90px;
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -85px;
+        div {
+            width: 27px;
+            height: 27px;
+            border-radius: 30px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                color: #99E2D0;
+                font-size: 19px;
+            }
+        }
+        
     }
 }
 
@@ -107,6 +141,9 @@
     .omf-restaurantpage-menu-card-container {
         width: 100%!important;
     }
+    .omf-restaurantpage-menu-size {
+        width: 31%;
+    }
     .omf-restaurantpage-menu-footer > .omf-container {
         max-width: 1220px;
     }
@@ -124,4 +161,20 @@
     }
 }
 
+@keyframes check-animation {
+    from {
+        margin-right: -85px;
+    }
+    to {
+        margin-right: 0;
+    }
+}
 
+@keyframes check-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
