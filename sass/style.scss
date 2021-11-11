@@ -220,6 +220,7 @@ h2 {
 .omf-restaurant-title-container {
     padding-bottom: 15px;
     display: flex;
+    justify-content: space-between;
 }
 
 .omf-restaurant-heart {
@@ -235,8 +236,7 @@ h2 {
 
 .omf-heart {
     position: absolute;
-    top: 15px;
-    left: 250px;
+    right: 25px;
     &-bg {
         transition: background 0.7s, background-clip 0.7s,color 0.7s;
     }
