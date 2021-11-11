@@ -240,7 +240,7 @@ h2 {
     &-bg {
         transition: background 0.7s, background-clip 0.7s,color 0.7s;
     }
-    &-bg:hover {
+    &-bg:active {
         background:-webkit-linear-gradient(270deg, $secondary, $primary);
         background-clip:text;
         -webkit-background-clip:text;
@@ -251,9 +251,8 @@ h2 {
         opacity: 0;
         
     }
-    &-display:hover {
-        opacity: 1;
-        
+    &-display:active {
+        opacity: 1;  
     }
 }
 
@@ -275,6 +274,18 @@ h2 {
         &>.omf-restaurant-card {
             width: 48%;
             margin-bottom: 40px;
+        }
+    }
+    .omf-heart {
+        &-bg:hover {
+            background:-webkit-linear-gradient(270deg, $secondary, $primary);
+            background-clip:text;
+            -webkit-background-clip:text;
+            color:transparent;
+            font-size: 31px!important;
+        }
+        &-display:hover {
+            opacity: 1;  
         }
     }
     

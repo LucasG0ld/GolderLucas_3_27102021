@@ -52,18 +52,21 @@
         margin-bottom: 15px;
     }
     &-card-container {
-        @extend .omf-functionning-card-container;
+        
         box-shadow: 0 0 16px rgb(0 0 0 / 13%);
         border-radius: 20px;
         margin-bottom: 15px!important;
         display: flex;
         position: relative;
         overflow: hidden;
-        &:hover .omf-restaurantpage-menu-animation {
+        opacity: 0;
+        animation: menu-appear 1s;
+        animation-fill-mode:forwards;
+        &:active .omf-restaurantpage-menu-animation {
             animation: check-animation 1s ease;
             animation-fill-mode:forwards; 
         }
-        &:hover .omf-restaurantpage-menu-animation i {
+        &:active .omf-restaurantpage-menu-animation i {
             animation: check-rotate 1s ease;
             animation-fill-mode:forwards; 
         }
@@ -120,6 +123,21 @@
     }
 }
 
+.animation-delay {
+    &1 {
+        animation-delay: 0s;
+    }
+    &2 {
+        animation-delay: 0.5s;
+    }
+    &3 {
+        animation-delay: 1s;
+    }
+    &4 {
+        animation-delay: 1.5s;
+    }
+}
+
 @media #{$desktop-responsive} {
     .omf-restaurantpage-picture {
         height: 530px;
@@ -140,6 +158,14 @@
     }
     .omf-restaurantpage-menu-card-container {
         width: 100%!important;
+        &:hover .omf-restaurantpage-menu-animation {
+            animation: check-animation 1s ease;
+            animation-fill-mode:forwards; 
+        }
+        &:hover .omf-restaurantpage-menu-animation i {
+            animation: check-rotate 1s ease;
+            animation-fill-mode:forwards; 
+        }
     }
     .omf-restaurantpage-menu-size {
         width: 31%;
@@ -147,6 +173,7 @@
     .omf-restaurantpage-menu-footer > .omf-container {
         max-width: 1220px;
     }
+    
 }
 
 @media #{$tablet-responsive} {
@@ -176,5 +203,16 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes menu-appear {
+    from {
+        top: -25px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
     }
 }
