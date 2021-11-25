@@ -38,7 +38,7 @@
         top: 45px;
         right: 30px;
         i {
-            font-size: 28px;
+            font-size: 30px;
         }
     }
     &-title {
@@ -61,14 +61,14 @@
         overflow: hidden;
         opacity: 0;
         animation: menu-appear 1s;
-        animation-fill-mode:forwards;
+        animation-fill-mode:both;
         &:active .omf-restaurantpage-menu-animation {
-            animation: check-animation 1s ease;
-            animation-fill-mode:forwards; 
+            margin-right: 0px;
+            transition: margin-right 1s;
+            
         }
         &:active .omf-restaurantpage-menu-animation i {
             animation: check-rotate 1s ease;
-            animation-fill-mode:forwards; 
         }
     }
 
@@ -106,6 +106,7 @@
         align-items: center;
         justify-content: center;
         margin-right: -85px;
+        transition: margin-right 1s;
         div {
             width: 27px;
             height: 27px;
@@ -144,7 +145,7 @@
         object-fit: cover;
     }
     .omf-restaurantpage-menu-container {
-        max-width: 1360px;
+        max-width: 1440px;
         margin: auto;
     }
     .omf-restaurantpage-center {
@@ -159,12 +160,11 @@
     .omf-restaurantpage-menu-card-container {
         width: 100%!important;
         &:hover .omf-restaurantpage-menu-animation {
-            animation: check-animation 1s ease;
-            animation-fill-mode:forwards; 
+            margin-right: 0px;
+            transition: margin-right 1s;
         }
         &:hover .omf-restaurantpage-menu-animation i {
             animation: check-rotate 1s ease;
-            animation-fill-mode:forwards; 
         }
     }
     .omf-restaurantpage-menu-size {
@@ -173,46 +173,8 @@
     .omf-restaurantpage-menu-footer > .omf-container {
         max-width: 1220px;
     }
-    
-}
-
-@media #{$tablet-responsive} {
-    .omf-restaurantpage-menu-card-container {
-        width: 80%!important;
+    .omf-restaurantpage-menu-animation {
+        transition: margin-right 1s;
     }
 }
 
-@media #{$mobile-responsive} {
-    .omf-restaurantpage-menu-card-container {
-        width: 100%!important;
-    }
-}
-
-@keyframes check-animation {
-    from {
-        margin-right: -85px;
-    }
-    to {
-        margin-right: 0;
-    }
-}
-
-@keyframes check-rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes menu-appear {
-    from {
-        top: -25px;
-        opacity: 0;
-    }
-    to {
-        top: 0;
-        opacity: 1;
-    }
-}

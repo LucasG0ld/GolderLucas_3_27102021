@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Titre de la page</title>
+    <title>Ohmyfood - Accueil</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,14 +18,19 @@
 </head>
 
 <body>
+    <!-- Début logo header -->
     <header class="omf-header omf-header-container omf-shadow">
         <h1>ohmyfood</h1>
     </header>
+    <!-- Fin logo header -->
+    <!-- Début section position -->
     <main>
         <section class="omf-position-container omf-position">
-            <span class="omf-position-text"><strong><i class="fas fa-map-marker-alt omf-icon"></i>Paris,
-                    Belleville</strong></span>
+            <h4 class="omf-position-text"><strong><i class="fas fa-map-marker-alt omf-icon"></i>Paris,
+                    Belleville</strong></h4>
         </section>
+        <!-- Fin section position -->
+        <!-- Début section slider -->
         <section class="omf-reserve-container omf-container-grey">
             <div class="omf-container">
                 <h2>Réservez le menu qui vous convient</h2>
@@ -33,6 +38,8 @@
                 <a class="omf-reserve-button">Explorer nos restaurants</a>
             </div>
         </section>
+        <!-- Fin section slider -->
+        <!-- Début section fonctionnement -->
         <section class="omf-container">
             <h2>Fonctionnement</h2>
             <div class="omf-functionning-container">
@@ -62,87 +69,99 @@
                 </div>
             </div>
         </section>
+        <!-- Fin section fonctionnement -->
+        <!-- Début section restaurant -->
         <section class="omf-container-grey">
             <div class="omf-container">
                 <h2>Restaurants</h2>
                 <div class="omf-restaurant-container">
-                    <a href="menilmontant.html">
-                        <div class="omf-restaurant-card">
+                    <div class="omf-restaurant-card">
+                        <a class="omf-restaurant-image-link" href="menilmontant.html">
                             <div class="omf-restaurant-new">
                                 <span>Nouveau</span>
                             </div>
                             <img class="omf-restaurant-picture"
                                 src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                                 alt="Restaurant La pallette du goût">
-                            <div class="omf-restaurant-title-container">
+                        </a>
+                        <div class="omf-restaurant-title-container">
+                            <a class="omf-restaurant-title-link" href="menilmontant.html">
                                 <div>
                                     <h3 class="bi-activity-subtitle">La palette du goût</h3>
                                     <span>Ménilmontant</span>
                                 </div>
-                                <div class="omf-restaurant-heart">
-                                    <i class="omf-heart omf-heart-hide far fa-heart"></i>
-                                    <i class="omf-heart omf-heart-bg omf-heart-display fas fa-heart"></i>
+                            </a>
+                            <div class="omf-restaurant-heart">
+                                <i class="omf-heart omf-heart-hide far fa-heart"></i>
+                                <i class="omf-heart omf-heart-bg omf-heart-display fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="omf-restaurant-card">
+                        <a class="omf-restaurant-image-link" href="charonne.html">
+                            <div class="omf-restaurant-new">
+                                <span>Nouveau</span>
+                            </div>
+                            <img class="omf-restaurant-picture" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="Restaurant La pallette du goût">
+                        </a>
+                        <div class="omf-restaurant-title-container">
+                            <a class="omf-restaurant-title-link" href="charonne.html">
+                                <div>
+                                    <h3 class="bi-activity-subtitle">La note enchantée</h3>
+                                    <span>Charonne</span>
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="charonne.html">
-                    <div class="omf-restaurant-card">
-                        <div class="omf-restaurant-new">
-                            <span>Nouveau</span>
-                        </div>
-                        <img class="omf-restaurant-picture" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                            alt="Restaurant La pallette du goût">
-                        <div class="omf-restaurant-title-container">
-                            <div>
-                                <h3 class="bi-activity-subtitle">La note enchantée</h3>
-                                <span>Charonne</span>
-                            </div>
+                            </a>
                             <div class="omf-restaurant-heart">
                                 <i class="omf-heart omf-heart-hide far fa-heart"></i>
                                 <i class="omf-heart omf-heart-bg omf-heart-display fas fa-heart"></i>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="cite-rouge.html">
                     <div class="omf-restaurant-card">
-                        <img class="omf-restaurant-picture"
-                            src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                            alt="Restaurant La pallette du goût">
+                        <a class="omf-restaurant-image-link" href="cite-rouge.html">
+                            <img class="omf-restaurant-picture"
+                                src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                alt="Restaurant La pallette du goût">
+                        </a>
                         <div class="omf-restaurant-title-container">
-                            <div>
-                                <h3 class="bi-activity-subtitle">À la française</h3>
-                                <span>Cité rouge</span>
-                            </div>
+                            <a class="omf-restaurant-title-link" href="cite-rouge.html">
+                                <div>
+                                    <h3 class="bi-activity-subtitle">À la française</h3>
+                                    <span>Cité rouge</span>
+                                </div>
+                            </a>
                             <div class="omf-restaurant-heart">
                                 <i class="omf-heart omf-heart-hide far fa-heart"></i>
                                 <i class="omf-heart omf-heart-bg omf-heart-display fas fa-heart"></i>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="folie-mecourt.html">
                     <div class="omf-restaurant-card">
-                        <img class="omf-restaurant-picture"
-                            src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                            alt="Restaurant La pallette du goût">
+                        <a class="omf-restaurant-image-link" href="cite-rouge.html">
+                            <img class="omf-restaurant-picture"
+                                src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt="Restaurant La pallette du goût">
+                        </a>
                         <div class="omf-restaurant-title-container">
-                            <div>
-                                <h3 class="bi-activity-subtitle">Le délice des sens</h3>
-                                <span>Folie-Mécourt</span>
-                            </div>
+                            <a class="omf-restaurant-title-link" href="cite-rouge.html">
+                                <div>
+                                    <h3 class="bi-activity-subtitle">Le délice des sens</h3>
+                                    <span>Folie-Mécourt</span>
+                                </div>
+                            </a>
                             <div class="omf-restaurant-heart">
                                 <i class="omf-heart omf-heart-hide far fa-heart"></i>
                                 <i class="omf-heart omf-heart-bg omf-heart-display fas fa-heart"></i>
                             </div>
                         </div>
                     </div>
-                </a>
                 </div>
             </div>
         </section>
+        <!-- Fin section restaurant -->
     </main>
+    <!-- Début footer -->
     <footer class="omf-footer">
         <div class="omf-container">
             <div class="omf-footer-text-container">
@@ -153,11 +172,17 @@
                     <li class="bi-footer-text"><a class="omf-footer-link" href="#"><i
                                 class="fas fa-hands-helping omf-icon"></i> Devenir partenaire</a></li>
                     <li class="bi-footer-text"><a class="omf-footer-link" href="#">Mentions légales</a></li>
-                    <li class="bi-footer-text"><a class="omf-footer-link" href="#">Contact</a></li>
+                    <li class="bi-footer-text"><a class="omf-footer-link" href="mailto:">Contact</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <!-- Fin footer -->
+        <!-- Début spinner -->
+        <div class="omf-loading-container">
+            <div class="omf-loading omf-loading--full-height"></div>
+        </div>
+        <!-- Fin spinner -->
 </body>
 
 </html>

@@ -1,13 +1,17 @@
 /* IMPORTS */
 
 @import "base/responsive.scss";
+@import "base/animation.scss";
 @import "pages/restaurant.scss";
+@import "layouts/layouts.scss";
+@import "components/components.scss";
 
 /* VARIABLES */
 
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
+$button-color: linear-gradient(180deg, $secondary, $primary);
 $white: #fff;
 $black: #000;
 
@@ -19,7 +23,8 @@ $font-title: Shrikhand, Arial, Helvetica, sans-serif;
 /* STYLE */
 
 body {
-    margin: 0;
+    max-width: 1440px;
+    margin: auto;
     padding: 0;
     font-family: $font-body;
     font-size: 16px;
@@ -35,16 +40,17 @@ h2 {
 }
 
 .omf-container {
-    max-width: 400px;
-    margin:  20px auto 0 auto;
-    h2 {
-        padding-top: 30px;
+    max-width: 300px;
+}
+
+.omf-restaurant-container {
+    a {
+        width: 100%;
     }
 }
 
-.omf-container-grey {
-    background-color: rgb(243, 243, 243);
-    padding-bottom: 30px;
+.omf-restaurantpage-menu-card-container {
+    width: 100%;
 }
 
 .omf-center-content {
@@ -56,205 +62,54 @@ h2 {
     box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
 }
 
-.omf-header {
-    padding: 15px 0 15px 0;
-    h1 {
-        text-align: center;
-    }
-}
-
-.omf-header-container {
-    position: relative;
-    z-index: 10;
-}
-
 .omf-position {
     background-color: rgb(236, 236, 236);
 }
 
-.omf-position-container {
-    @extend .omf-header;
-    @extend .omf-center-content;
-}
-
 .omf-position-text {
     font-size: 19px;
-}
-
-.omf-icon {
-    margin-right: 15px;
-}
-
-.omf-reserve-container {
-    @extend .omf-center-content;
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 45px 40px 45px;
-    background: rgb(247, 247, 247);
+    margin: 0;
 }
 
 .omf-reserve-paragraph {
     margin: 0 0 35px 0;
 }
 
-.omf-reserve-button {
-    padding: 15px;
-    color: $white;
-    border-radius: 50px;
-    background: linear-gradient(180deg, $secondary, $primary);
-    margin-top: 25px;
-}
-
-.omf-functionning-card-container {
-    display: flex;
-    margin-bottom: 30px;
-}
-
-.omf-functionning-number-container {
-    background: $primary;
-    border-radius: 50px;
-    width: 24px;
-    height: 24px;
-    margin: auto;
-    display: flex;
-}
-
-.omf-functionning-number {
-    margin: auto;
-    color: $white;
-}
-
-.omf-functionning-card {
-    box-shadow: 0 0 16px rgb(0 0 0 / 13%);
-    width: 100%;
-    padding: 25px 0;
-    border-radius: 20px;
-    position: relative;
-    right: 10px;
-
-    i {
-        margin-left: 40px;
-    }
-}
-
-.omf-restaurant-container {
-    display: flex;
-    flex-direction: column;
-    a {
-        color: black;
-        text-decoration: none;
-        width: 48%;
-    }
-}
-
-.omf-restaurant-card {
-    background: $white;
-    border-radius: 15px 15px 15px 15px;
-    display: flex;
-    flex-direction: column;
-    height: 280px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 16px rgb(0 0 0 / 13%);
-    position: relative;
-
-    h3 {
-        margin: 15px 0 5px 10px;
-    }
-
-    span {
-        margin: 0 0 15px 10px;
-    }
-}
-
-.omf-restaurant-picture {
-    object-fit: cover;
-    width: 100%;
-    border-radius: 15px 15px 0 0;
+.omf-loading-container {
+    position: fixed;
     height: 100%;
-    overflow: hidden;
-}
-
-.omf-footer {
-    background: rgb(68, 68, 68);
-    padding: 5px 0 10px 0;
-}
-
-.omf-footer-text-container {
-    h3 {
-        margin-top: 10px;
-        font-family: Shrikhand, Arial, Helvetica, sans-serif;
-        color: white;
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    li {
-        margin-bottom: 5px;
-    }
-    a {
-        color: $white;
-        text-decoration: none;
-    }
-}
-
-.fa-hands-helping {
-    width: 13px;
-}
-
-.omf-restaurant-new {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    background: rgb(168, 207, 168);
-    padding: 5px 10px;
-    border-radius: 3px;
-    span {
-        margin: 0;
-        font-weight: 700;
-        color: rgb(71, 105, 71);
-    }
-}
-
-.omf-restaurant-title-container {
-    padding-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.omf-restaurant-heart {
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(0,0%,100%,.9);
+    z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    position: relative;
-    i {
-        font-size: 30px;
-    }
+    animation: loading-body 1.5s;
+    animation-fill-mode:forwards; 
 }
 
-.omf-heart {
-    position: absolute;
-    right: 25px;
-    &-bg {
-        transition: background 0.7s, background-clip 0.7s,color 0.7s;
-    }
-    &-bg:active {
-        background:-webkit-linear-gradient(270deg, $secondary, $primary);
-        background-clip:text;
-        -webkit-background-clip:text;
-        color:transparent;
-        font-size: 31px!important;
-    }
-    &-display {
-        opacity: 0;
+.omf-loading {
+    display: flex;
+    justify-content: center;
+
+    &--full-height {
+        align-items: center;
+        height: 100%;
         
     }
-    &-display:active {
-        opacity: 1;  
+    &::after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        border: 10px solid #dddddd;
+        border-top-color: #9356DC;
+        border-radius: 50%;
+        transform: rotate(0.16turn);
+        animation: loading 1s ease infinite;
     }
-}
+  }
 
 @media #{$desktop-responsive} {
     .omf-container {
@@ -276,6 +131,15 @@ h2 {
             margin-bottom: 40px;
         }
     }
+    .omf-restaurant {
+        &-image-link {
+            width: 100%;
+            height: 203px;
+        }
+        &-title-link {
+            width: 100%
+        }
+    }
     .omf-heart {
         &-bg:hover {
             background:-webkit-linear-gradient(270deg, $secondary, $primary);
@@ -291,19 +155,6 @@ h2 {
     
 }
 
-@media #{$mobile-responsive} {
-    .omf-restaurant-container {
-        a {
-            width: 100%
-        }
-    }
-}
-
-@media #{$mini-mobile-responsive} {
-    .omf-container {
-        max-width: 300px;
-    }
-}
 
 
 
