@@ -313,6 +313,7 @@ $mobile-responsive: "(max-width: 768px)";*/
   margin-top: 25px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  text-decoration: none;
 }
 .omf-reserve-button:hover {
   background: linear-gradient(180deg, #ff93e1, #a16be0);
@@ -377,6 +378,7 @@ $mobile-responsive: "(max-width: 768px)";*/
   background: #a8cfa8;
   padding: 5px 10px;
   border-radius: 3px;
+  text-decoration: none;
 }
 .omf-restaurant-new span {
   margin: 0;
