@@ -10,6 +10,7 @@
     margin-top: 25px;
     box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
     cursor: pointer;
+    text-decoration: none;
     &:hover {
         background: linear-gradient(180deg, lighten(#FF79DA, 5), lighten(#9356DC, 5));
         box-shadow: 0 5px 12px rgb(0 0 0 / 40%);

@@ -313,6 +313,7 @@ $mobile-responsive: "(max-width: 768px)";*/
   margin-top: 25px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  text-decoration: none;
 }
 .omf-reserve-button:hover {
   background: linear-gradient(180deg, #ff93e1, #a16be0);
